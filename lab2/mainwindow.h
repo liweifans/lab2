@@ -25,6 +25,8 @@ private slots:
 
     void on_actionReplace_triggered();
 
+    void on_TextEdit_textChanged();
+
     void on_actionNew_triggered();
 
     void on_actionOpen_triggered();
@@ -67,6 +69,10 @@ private slots:
 
     void on_actionExit_triggered();
 
+    void on_TextEdit_cursorPositionChanged();
+
+    void on_actionLine_triggered(bool checked);
+
 private:
     Ui::MainWindow *ui;
 
@@ -75,5 +81,7 @@ private:
 
     QString filePath;
     QString curFilePath;
+
+    bool textChanged = false;
 };
 #endif // MAINWINDOW_H
